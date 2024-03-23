@@ -75,8 +75,17 @@ class Person{
 
 
 void main() {
-  Person person = Person(fname:"Nimal",lname:"Vishal",age:34);
+  void main() {
+  Person person = Person(
+    fname: "Nimal", 
+    lname: "Vishal", 
+    age: 34);
+  
+  print(person.getfname);//getter
+  person.setfname="Vishal";//setter 
   print(person.getfname);
-  person.setfname("vishal");
+  person.setage=68;
+  print(person.getage);
+}
   
 }
