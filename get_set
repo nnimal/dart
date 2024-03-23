@@ -1,0 +1,82 @@
+class Person{
+  //fields
+  
+  String? _fname;
+  String? _lname;
+  int? _age;
+  
+  //constructor
+  Person({
+    required String fname ,required String lname , required age})
+  {
+    _fname=fname;
+    _lname =lname;
+    _age = age;
+    
+  }
+  //getter
+  String get getfname{
+   if(_fname!=null){
+      return _fname!;
+    }
+    else {
+      return "First name not define";
+    }
+  }
+  
+    String get getlname{
+   if(_lname!=null){
+      return _lname!;
+    }
+    else {
+      return " Last name not define";
+    }
+  }
+  dynamic get getage{
+   if(_age!=null){
+      return _age!;
+    }
+    else {
+      return " Age is not define";
+    }
+  }
+  
+  //setter
+  
+  set setfname(String fname){
+    if(fname.isNotEmpty){
+      _fname=fname;
+    }
+    else{
+      print("invalid First name");
+    }
+  }
+  
+  set setlname(String lname){
+    if(lname.isNotEmpty){
+      _lname=lname;
+    }
+        else{
+      print("invalid Last name");
+    }
+
+  }
+  
+  set setage(int age){
+    if(age>0){
+      _age=age;
+    }
+    else {
+      print ("invalid age");
+    }
+  }
+  
+}
+
+
+void main() {
+  Person person = Person(fname:"Nimal",lname:"Vishal",age:34);
+  print(person.getfname);
+  person.setfname("vishal");
+  
+}
